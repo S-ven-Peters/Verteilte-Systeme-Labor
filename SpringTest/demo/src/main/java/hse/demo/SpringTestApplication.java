@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringTestApplication {
 	private String secret = "none";
-	private String log = "";
 	private ArrayList<Item> items = new ArrayList<>();
 
 	public static void main(String[] args) {
@@ -56,11 +55,6 @@ public class SpringTestApplication {
 		return secret;
 	}
 
-	@GetMapping("/log")
-	public String getLog() {
-		return log;
-	}
-
 	@PostMapping(path = "/item", consumes = "application/json", produces = "application/json")
 	public Item createItem(@RequestBody Item item) {
 		// don't add duplicates
@@ -92,7 +86,6 @@ public class SpringTestApplication {
 	@PutMapping(path = "/item", consumes = "application/json", produces = "application/json")
 	public Item updateItem(@RequestBody Item item) {
 		for (Item i : items) {
-			log += i.getName() + ", " + item.getName() + "; ";
 			if (i.getName().equals(item.getName())) {
 				i.setAmount(item.getAmount());
 				return i;
