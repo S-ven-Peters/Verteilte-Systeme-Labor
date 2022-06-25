@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.29" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\NHibernate NPA\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\NHibernate NPA\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\NHibernate NPA\MySql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\NHibernate NPA\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NpaNHibernate">
+      <HintPath>..\NHibernate NPA\NpaNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NPersistence">
+      <HintPath>..\NHibernate NPA\NPersistence.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
