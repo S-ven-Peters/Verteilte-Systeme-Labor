@@ -55,8 +55,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
 app.MapGet("/todos/", () =>
 {
     List<Dictionary<string, dynamic>> data = new List<Dictionary<string, dynamic>>();
